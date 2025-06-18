@@ -37,3 +37,6 @@ next-env.d.ts
 
 # OpenNext
 /.open-next
+
+
+package-lock.json
