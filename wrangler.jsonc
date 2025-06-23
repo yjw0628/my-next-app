@@ -19,7 +19,7 @@
 		"enabled": true
 	},
 	"browser": {
-		"binding": "BROWSER"
+		"binding": "BR"
 	},
 	"placement": {
 		"mode": "smart"

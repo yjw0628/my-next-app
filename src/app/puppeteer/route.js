@@ -12,7 +12,7 @@ export async function GET(request) {
         url = new URL(url).toString(); // normalize
         img = await env.KV.get(url, { type: "arrayBuffer" });
         if (img === null) {
-            const browser = await puppeteer.launch(env.BROWSER);
+            const browser = await puppeteer.launch(env.BR);
             const page = await browser.newPage();
             await page.goto(url);
             img = await page.screenshot();

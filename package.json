@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "wrangler dev --remote"
   },
   "dependencies": {
     "antd": "^5.26.1",
