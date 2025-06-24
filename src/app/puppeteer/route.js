@@ -22,7 +22,7 @@ export async function GET(request) {
                 // 输出纸张格式
                 format: 'a3',
                 // 超时时间，这里的超时时间需要单独设置
-                timeout: 180e3,
+                timeout: 15e3,
                 // 边距
                 margin: { left: 0.2, top: 0.2, right: 0.2, bottom: 0.2 },
             })
