@@ -17,7 +17,7 @@ export async function GET(request) {
             await page.goto(url);
             img = await page.screenshot();
             await env.KV.put(url, img, {
-                expirationTtl: 60 * 60 * 24,
+                expirationTtl: 60 * 10, // 缓存10分钟
             });
             await browser.close();
         }
