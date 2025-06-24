@@ -13,7 +13,7 @@ export async function GET(request) {
         if (img === null) {
             const browser = await puppeteer.launch(env.BR);
             const page = await browser.newPage();
-            page.setViewport({ width: 1920, height: 1280 })
+            page.setViewport({ width: 1366, height: 768 })
             await page.goto(url);
             img = await page.screenshot();
             await env.KV.put(url, img, {
