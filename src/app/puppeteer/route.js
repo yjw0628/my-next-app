@@ -13,13 +13,12 @@ export async function GET(request) {
         if (pdf === null) {
             const browser = await puppeteer.launch(env.BR);
             const page = await browser.newPage();
-            page.setViewport({ width: 1366, height: 768 })
-            await page.goto(url, { waitUntil: 'networkidle0' });
+            await page.goto(url);
             pdf = await page.pdf({
                 // 隐藏页头页脚
                 displayHeaderFooter: false,
                 // 输出背景图
-                printBackground: false,
+                printBackground: true,
                 // 输出纸张格式
                 format: 'a3',
                 // 超时时间，这里的超时时间需要单独设置
